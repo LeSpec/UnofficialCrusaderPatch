@@ -1,6 +1,16 @@
-// ======================
+﻿// ======================
 //         dev
 // ======================
+o_tab_assassin_flag
+{
+"Tab for assassin flag"
+}
+
+o_tab_assassin_flag_descr
+{
+"Removes the tab function with selecting the assassin flag."
+}
+
 o_ctrl_toggle
 {
 "Swap ctrl+key and key."
