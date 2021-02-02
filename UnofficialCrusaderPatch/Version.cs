@@ -3240,7 +3240,7 @@ namespace UCP
             {
                 new DefaultHeader("o_ctrl_toggle")
                 {
-                    new BinaryEdit("o_ctrl_h")
+                    new BinaryEdit("o_ctrl_toggle")
                     {
                         new BinSkip(3125),
 

@@ -6,6 +6,11 @@ o_ctrl_toggle
 "Swap ctrl+key and key."
 }
 
+o_ctrl_toggle_descr
+{
+"Swap key combination ctrl+key with its counterpart key (h, m, b, i, t, n, g, a)."
+}
+
 ai_housing
 {
 "Customize the AIs decision to build and delete houses"
