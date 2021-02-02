@@ -719,7 +719,7 @@ namespace UCP
 
             #region AI LORDS
 
-            new Change("ai_housing", ChangeType.AILords, false, false, 
+            new Change("ai_housing", ChangeType.AILords, false, false,
                 (parameters) => {
                     return GetAIHousingParamHeader(parameters);
                 })
@@ -3104,7 +3104,7 @@ namespace UCP
                     }
                 }
             },
-            
+
             new Change("o_change_siege_engine_spawn_position_catapult", ChangeType.Other, false)
             {
                 new DefaultHeader("o_change_siege_engine_spawn_position_catapult")
@@ -3233,6 +3233,48 @@ namespace UCP
                             0xE8, new BinRefTo("originalFun"), // call originalFun
                         }
                     }
+                }
+            },
+
+            new Change("o_ctrl_toggle", ChangeType.Other, true)
+            {
+                new DefaultHeader("o_ctrl_toggle")
+                {
+                    new BinaryEdit("o_ctrl_h")
+                    {
+                        new BinSkip(3125),
+
+                        // h
+                        new BinBytes(0x75), // jne
+                        new BinSkip(251),
+                        
+                        // m
+                        new BinBytes(0x75), // jne
+                        new BinSkip(419),
+                        
+                        // b
+                        new BinBytes(0x75), // jne
+                        new BinSkip(200),
+
+                        // i
+                        new BinBytes(0x75), // jne
+                        new BinSkip(438),
+
+                        // t
+                        new BinBytes(0x75), // jne
+                        new BinSkip(200),
+
+                        // n
+                        new BinBytes(0x75), // jne
+                        new BinSkip(200),
+                        
+                        // g
+                        new BinBytes(0x75), // jne
+                        new BinSkip(201),
+                        
+                        // a
+                        new BinBytes(0x75) // jne
+                    },
                 }
             }
 

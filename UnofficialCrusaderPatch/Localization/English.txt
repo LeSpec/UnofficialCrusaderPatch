@@ -1,6 +1,11 @@
 // ======================
 //         dev
 // ======================
+o_ctrl_toggle
+{
+"Swap ctrl+key and key."
+}
+
 ai_housing
 {
 "Customize the AIs decision to build and delete houses"
